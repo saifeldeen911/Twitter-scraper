@@ -34,11 +34,11 @@ def twitter_scraper(driver, url, stock_symbol):
         # Find tweets on the page
         tweets = driver.find_elements(By.XPATH, "//div[contains(@data-testid, 'tweetText')]")
 
-        # Count the mentions of the stock symbol (case-insensitive)
+        # Count the mentions of the stock symbol 
         mentions = 0
         for tweet in tweets:
 
-            # using regular expression to find the stock symbol starting with Cashtag within the tweet text
+            # using regular expression to find the stock symbol starting with Cashtag within the tweet text (case-insensitive)
             if re.search(r'\$\b' + re.escape(stock_symbol) + r'\b', tweet.text, re.IGNORECASE):
                 # Increment the mention count if the stock symbol is found
                 mentions += 1
