@@ -9,7 +9,9 @@ import time
 # Initialize the WebDriver with Chrome options
 def init_driver():
     options = Options()
-    options.add_argument("--headless")  # Run in headless mode for no GUI
+
+    # Run in headless mode for no GUI
+    options.add_argument("--headless")
     driver = webdriver.Chrome(options=options)
 
     return driver
@@ -40,10 +42,12 @@ def twitter_scraper(driver, url, stock_symbol):
 
             # using regular expression to find the stock symbol starting with Cashtag within the tweet text(case-insensitive)
             if re.search(r'\$\b' + re.escape(stock_symbol) + r'\b', tweet.text, re.IGNORECASE):
+                
                 # Increment the mention count if the stock symbol is found
                 mentions += 1
 
         return mentions
+        
     # Error handling when scraping url
     except Exception as e:
         print(f"Error scraping {url}: {e}")
