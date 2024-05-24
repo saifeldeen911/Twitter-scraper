@@ -38,7 +38,7 @@ def twitter_scraper(driver, url, stock_symbol):
         mentions = 0
         for tweet in tweets:
 
-            # using regular expression to find the stock symbol starting with Cashtag within the tweet text (case-insensitive)
+            # using regular expression to find the stock symbol starting with Cashtag within the tweet text(case-insensitive)
             if re.search(r'\$\b' + re.escape(stock_symbol) + r'\b', tweet.text, re.IGNORECASE):
                 # Increment the mention count if the stock symbol is found
                 mentions += 1
