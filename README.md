@@ -28,8 +28,8 @@ A Python script for scraping tweets mentioning a specific stock symbol from mult
 You can use pip to install the necessary packages. It's recommended to use a virtual environment.
 
    ```bash
-      git clone https://github.com/saifeldeen911/Twitter-scraper.git
-      cd Twitter-scraper
+   git clone https://github.com/saifeldeen911/Twitter-scraper.git
+   cd Twitter-scraper
    ```
 3. **Download and set up ChromeDriver:**
 
@@ -39,7 +39,7 @@ Download ChromeDriver from ChromeDriver Downloads and ensure it's available in y
 1. **Run the script:**
    
    ```bash
-      python twitter_scraper.py
+   python twitter_scraper.py
    ```
 2. **Input the required information:**
 
