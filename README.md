@@ -23,7 +23,7 @@ A Python script for scraping tweets mentioning a specific stock symbol from mult
    git clone https://github.com/saifeldeen911/Twitter-scraper.git
    cd Twitter-scraper
    
-2. **Install required Python packages:
+2. **Install required Python packages:**
 
 You can use pip to install the necessary packages. It's recommended to use a virtual environment.
 
@@ -31,17 +31,17 @@ You can use pip to install the necessary packages. It's recommended to use a vir
       git clone https://github.com/saifeldeen911/Twitter-scraper.git
       cd Twitter-scraper
    ```
-3. **Download and set up ChromeDriver:
+3. **Download and set up ChromeDriver:**
 
 Download ChromeDriver from ChromeDriver Downloads and ensure it's available in your system's PATH.
 
 ## Usage
-1. **Run the script:
+1. **Run the script:**
    
    ```bash
       python twitter_scraper.py
    ```
-2. **Input the required information:
+2. **Input the required information:**
 
 - Stock Symbol: Enter the stock symbol without the $ sign (e.g., AAPL).
 - Time Interval: Enter the time interval in minutes for how often you want the script to scrape the accounts.
@@ -50,16 +50,16 @@ The script will continuously scrape the specified Twitter accounts at the given 
 
 ## How It Works
 
-1. **Initialization:
+1. **Initialization:**
 
 - The script initializes a headless Chrome WebDriver using Selenium.
 
-2. **Scraping:
+2. **Scraping:**
 
 - For each Twitter account URL, the script loads the page and scrolls down to load more tweets.
 - It then searches for tweets mentioning the specified stock symbol using regular expressions.
   
-3. **Reporting:
+3. **Reporting:**
 
 - The script counts and reports the number of mentions of the stock symbol found in the tweets.
 - It repeats the scraping process based on the user-defined time interval.
