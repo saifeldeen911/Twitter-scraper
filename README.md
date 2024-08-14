@@ -27,39 +27,45 @@ A Python script for scraping tweets mentioning a specific stock symbol from mult
 
 You can use pip to install the necessary packages. It's recommended to use a virtual environment.
 
-    ```bash
+   ```bash
       git clone https://github.com/saifeldeen911/Twitter-scraper.git
-       cd Twitter-scraper
-
-
+      cd Twitter-scraper
+   ```
 3. **Download and set up ChromeDriver:
 
 Download ChromeDriver from ChromeDriver Downloads and ensure it's available in your system's PATH.
 
 ## Usage
-Run the script:
+1. **Run the script:
    
-      ```bash
-   python twitter_scraper.py
-Input the required information:
+   ```bash
+      python twitter_scraper.py
+   ```
+2. **Input the required information:
 
-Stock Symbol: Enter the stock symbol without the $ sign (e.g., AAPL).
-Time Interval: Enter the time interval in minutes for how often you want the script to scrape the accounts.
+- Stock Symbol: Enter the stock symbol without the $ sign (e.g., AAPL).
+- Time Interval: Enter the time interval in minutes for how often you want the script to scrape the accounts.
+
 The script will continuously scrape the specified Twitter accounts at the given time interval and display the number of mentions of the stock symbol.
 
-How It Works
-Initialization:
+## How It Works
 
-The script initializes a headless Chrome WebDriver using Selenium.
-Scraping:
+1. **Initialization:
 
-For each Twitter account URL, the script loads the page and scrolls down to load more tweets.
-It then searches for tweets mentioning the specified stock symbol using regular expressions.
-Reporting:
+- The script initializes a headless Chrome WebDriver using Selenium.
 
-The script counts and reports the number of mentions of the stock symbol found in the tweets.
-It repeats the scraping process based on the user-defined time interval.
-Notes
-The script runs indefinitely until manually stopped. Ensure that you have the appropriate permissions and resources to run it.
-Modify the twitter_accounts list in the script to include the Twitter accounts you want to scrape.
-Adjust the time_interval to control how frequently the script performs scraping.
+2. **Scraping:
+
+- For each Twitter account URL, the script loads the page and scrolls down to load more tweets.
+- It then searches for tweets mentioning the specified stock symbol using regular expressions.
+  
+3. **Reporting:
+
+- The script counts and reports the number of mentions of the stock symbol found in the tweets.
+- It repeats the scraping process based on the user-defined time interval.
+
+## Notes
+
+- The script runs indefinitely until manually stopped. Ensure that you have the appropriate permissions and resources to run it.
+- Modify the twitter_accounts list in the script to include the Twitter accounts you want to scrape.
+- Adjust the time_interval to control how frequently the script performs scraping.
